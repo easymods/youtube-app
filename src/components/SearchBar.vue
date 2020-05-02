@@ -23,6 +23,7 @@
         methods: {
             onSubmit() {
                 this.$emit('onInputChange', this.inputField);
+                this.inputField = '';
             }
         }
     }
