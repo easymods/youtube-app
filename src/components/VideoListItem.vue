@@ -1,20 +1,18 @@
 <template>
     <div class="item">
-        <div class="image">
+        <div class="ui small image">
             <img :src="imageUrl">
         </div>
-        <div class="content">
+        <div class="vertical aligned content">
             <a class="header" @click="onVideoSelect">{{video.snippet.title}}</a>
-        <div class="meta">
-            <span>{{video.snippet.description}}</span>
+            
+            <div class="description">
+                <p>{{video.snippet.description}}</p>
+            </div>
+            <div class="extra">
+                Published: {{dateToString}}
+            </div>
         </div>
-        <div class="description">
-            <p></p>
-        </div>
-        <div class="extra">
-            Published: {{dateToString}}
-        </div>
-    </div>
     </div>
 </template>
 

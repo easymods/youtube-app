@@ -1,14 +1,10 @@
 <template>
-    <div class="main">
-        <div class="ui container">
-            <div class="ui items">
-                <VideoListItem v-for="video in videos" 
-                :key="video.etag"
-                :video="video"
-                @onVideoSelected="onVideoSelect"
-                />
-            </div>
-        </div>
+    <div class="ui divided items">
+        <VideoListItem v-for="video in videos" 
+        :key="video.etag"
+        :video="video"
+        @onVideoSelected="onVideoSelect"
+        />
     </div>
 </template>
 

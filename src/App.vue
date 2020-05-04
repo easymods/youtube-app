@@ -1,8 +1,16 @@
 <template>
   <div id="app">
+    <div class="ui container">
       <SearchBar @onInputChange="onSubmit"/>
-      <VideoDetail :selectedVideo='selectedVideo'/>
-      <VideoList :videos="videos" @onVideoSelected='onVideoSelect'/>
+      <div class="ui grid">
+        <div class="ten wide column">
+          <VideoDetail :selectedVideo='selectedVideo'/>
+        </div>
+        <div class="six wide column" :class="[selectedVideo ? 'six wide column' : 'sixteen wide column' ]">
+          <VideoList :videos="videos" @onVideoSelected='onVideoSelect'/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
